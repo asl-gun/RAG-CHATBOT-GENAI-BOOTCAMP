@@ -32,8 +32,8 @@ Proje, LangChain çatısı altında, tipik bir RAG akışını takip eder:
 2.	Parçalama (Chunking): Metin, $500\text{ karakterlik}$ küçük parçalara ayrılır.
 3.	Vektörleştirme (Embedding): Her parça, Hugging Face all-mpnet-base-v2 modeli kullanılarak sayısal bir vektöre dönüştürülür.
 4.	Depolama: Vektörler, hızlı arama için FAISS indeksinde saklanır.
-5.	Sorgu (Retrieval): Kullanıcı bir soru sorduğunda, bu soru vektörleştirilir ve FAISS, en alakalı $k=5$ metin parçasını bulur.
-6.	Üretim (Generation): Bu 5 metin parçası context olarak kullanılır ve orijinal soru, akademik bir dille cevap verilmesi öngörülerek hazırlanmış prompt şablonuyla birlikte Gemini 2.0 Flash modeline gönderilir.
+5.	Sorgu (Retrieval): Kullanıcı bir soru sorduğunda, bu soru vektörleştirilir ve FAISS, en alakalı $k=8$ metin parçasını bulur.
+6.	Üretim (Generation): Bu 8 metin parçası context olarak kullanılır ve orijinal soru, akademik bir dille cevap verilmesi öngörülerek hazırlanmış prompt şablonuyla birlikte Gemini 2.0 Flash modeline gönderilir.
 7.	Yanıt: Gemini, sadece sağlanan contexti kullanarak nesnel bir cevap sentezler.
 
 
