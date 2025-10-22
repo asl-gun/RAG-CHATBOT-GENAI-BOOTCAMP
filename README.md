@@ -24,34 +24,32 @@ Bu RAG zinciri, Retrieval ve Generation aşamalarında aşağıdaki teknolojiler
 | **RAG Çatısı** | [cite_start]LangChain [cite: 44] | Tüm pipeline bileşenlerini entegre eder ve yönetir. |
 | **Arayüz** | Gradio | Kullanıcı etkileşimi için Python temelli web arayüzü. |
 
-### [cite_start]Elde Edilen Sonuçlar Özeti [cite: 12]
+### Elde Edilen Sonuçlar Özeti
 
 Yapılan testler sonucunda:
 * **Analitik Başarı:** Sistem, kaynak materyal üzerinden **yüksek seviyeli sentez** ve akademik çıkarımlar (Örn: Kahraman motivasyonları, yeminlerin rolü) yapabildiğini kanıtlamıştır.
 * **RAG Kuralı Uygulaması:** Model, spesifik faktik soruların cevabını bulamadığında, *anti-hallucination* hedefine uygun olarak **kesinlikle reddetmiş** (Örn: Köpeğin adı), bu da RAG kuralına sıkı sıkıya uyduğunu göstermiştir.
-* [cite_start]**Optimizasyon:** Embedding süreci, **T4 GPU** optimizasyonu ile hızlandırılmıştır[cite: 43].
+* **Optimizasyon:** Embedding süreci, **T4 GPU** optimizasyonu ile hızlandırılmıştır.
 
-## [cite_start]4. Kodun Çalışma Kılavuzu [cite: 19]
-
-[cite_start]Bu aşama, kodunuzun çalıştırılabilmesi için gerekenleri anlatan bir kılavuzdur[cite: 20].
+## 4. Çalışma Kılavuzu
 
 1.  **Gereksinimler:** `requirements.txt` dosyasını kullanarak bağımlılıkları kurun:
     ```bash
-    [cite_start]pip install -r requirements.txt [cite: 21]
+    pip install -r requirements.txt 
     ```
-2.  **Ortam Ayarı:** Gemini API Key, Kaggle Username ve Kaggle Key'i ortam değişkeni olarak veya Colab Secrets aracı ile ayarlayın[cite: 21].
-3.  **GPU Ayarı:** Colab'de **Runtime $\to$ Change runtime type** menüsünden **T4 GPU**'yu seçin (Embedding süreci için kritiktir).
-4.  **Çalıştırma:** Notebook'u veya Python dosyanızı sırayla çalıştırın. Kod, veri setini indirecek, FAISS indeksini oluşturacak ve Gradio arayüzünü başlatacaktır[cite: 21].
+2.  **Ortam Ayarı:** Gemini API Key, Kaggle Username ve Kaggle Key'i ortam değişkeni olarak veya Colab Secrets aracı ile ayarlayın
+3.  **GPU Ayarı:** Colab'de **Runtime $\to$ Change runtime type** menüsünden **T4 GPU**'yu seçin (Embedding aşamasının hızlı olması ve daha nokta atışı verilere ulaşması açısından kritiktir.)).
+4.  **Çalıştırma:** Notebook'u sırayla çalıştırın. Kod çalışınca sırayla veri setini indirecek, FAISS indeksini oluşturacak ve Gradio arayüzünü başlatacak.
 
-## [cite_start]5. Web Arayüzü & Product Kılavuzu [cite: 24]
+## 5. Web Arayüzü & Product Kılavuzu
 
 [cite_start]Arayüz, Gradio'nun `ChatInterface` yapısıyla sunulmuştur[cite: 25].
 
 * **Çalışma Akışı:** Arayüze girildiğinde, sistem kurulmuş RAG zincirini kullanarak analiz ve faktik sorulara yanıt verir. En iyi sonuçlar için sorularınızı İngilizce sormanız tavsiye edilir.
 * **Test Etme:** Projenin yeteneklerini doğrulamak için **analitik ve tematik sorgular** kullanın (Örn: "Analyze the role of promises and oaths...").
 
-### [cite_start]Web Linkiniz 
+### Web Linkiniz 
 
-[cite_start]**Önemli:** Projenizin URL'si mutlaka burada paylaşılmalıdır.
+**Önemli:** Projenizin URL'si mutlaka burada paylaşılmalıdır.
 
 > **[LÜTFEN GRADIO İLE OLUŞAN CANLI LİNKİNİZİ BURAYA YAPIŞTIRIN]**
