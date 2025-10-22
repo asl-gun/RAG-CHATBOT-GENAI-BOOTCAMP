@@ -4,18 +4,17 @@
 
 ## 1. Projenin Amacı
 
-Bu proje, RAG (Retrieval Augmented Generation) mimarisini kullanarak geniş bir masal koleksiyonu üzerinde analitik ve faktik sorgulama yapabilen, akademik odaklı bir chatbot geliştirmeyi amaçlamaktadır. Sistem, LLM'in (Gemini 2.0 Flash) kendi genel bilgisini kullanmasını engelleyerek, yanıtların **kesinlikle yüklenen masal metinlerine** dayanmasını sağlamaktadır.
+Bu proje, RAG mimarisini kullanarak geniş bir masal koleksiyonu üzerinde bilgi sorgulama ve tematik analiz yapabilen, özellikle edebiyat öğrencileri ve akademisyenlerine yönelik akademik araştırmalarda asaitanlık yapabilecek bir chatbot geliştirmeyi amaçlamaktadır. Sistem, LLM'in (Gemini 2.0 Flash) kendi genel bilgisini kullanmasını engelleyerek, yanıtların **öncelikli olarak yüklenen masal metinlerine** dayanmasını sağlamaktadır. Şu anda kullanılan veri seti sadece masal türünde metinlerden oluşup ileride geniş bir edebi kaynak setiyle daha kapsamlı aaştırmalarda kullanılması sağlanabilir.
 
-## [cite_start]2. Veri Seti Hakkında Bilgi [cite: 10]
-
+## 2. Veri Seti Hakkında Bilgi
 **Veri Seti:** Fairy Tales Collection
 **Kaynak:** Kaggle (cuddlefish/fairy-tales)
-**İçerik:** Çeşitli İngilizce masal koleksiyonlarından (Grimm, Anderson, Binbir Gece Masalları, vb.) derlenmiş ham metinler.
+**İçerik:** 19-20. yy'a ait çeşitli İngilizce masal koleksiyonlarından (Grimm, Anderson, Binbir Gece Masalları, vb.) derlenmiş metinler
 **Hazırlık Metodolojisi:** Projenin başlangıcında, Colab'in kısıtlı kaynaklarında hızlı ve stabil çalışması için, tüm veri setinden **1000 adet metin parçası** (chunk) üretilerek sisteme dahil edilmiştir.
 
-## [cite_start]3. Kullanılan Yöntemler ve Çözüm Mimarisi [cite: 11, 23]
+## 3. Kullanılan Yöntemler ve Çözüm Mimarisi
 
-Bu RAG zinciri, Retrieval (Erişim) ve Generation (Üretim) aşamalarında aşağıdaki teknolojileri kullanmıştır:
+Bu RAG zinciri, Retrieval ve Generation aşamalarında aşağıdaki teknolojileri kullanmıştır:
 
 | Bileşen | Teknoloji | Amaç |
 | :--- | :--- | :--- |
