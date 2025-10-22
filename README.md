@@ -33,19 +33,19 @@ Yapılan testler sonucunda:
 
 ## 4. Çalışma Kılavuzu
 
-1.  **Gereksinimler:** `requirements.txt` dosyasını kullanarak bağımlılıkları kurun:
+1.  **Gereksinimler:** `requirements.txt` dosyasını kullanarak gerekli tüm kütüphaneleri kurun:
     ```bash
     pip install -r requirements.txt 
     ```
-2.  **Ortam Ayarı:** Gemini API Key, Kaggle Username ve Kaggle Key'i ortam değişkeni olarak veya Colab Secrets aracı ile ayarlayın
-3.  **GPU Ayarı:** Colab'de **Runtime $\to$ Change runtime type** menüsünden **T4 GPU**'yu seçin (Embedding aşamasının hızlı olması ve daha nokta atışı verilere ulaşması açısından kritiktir.)).
-4.  **Çalıştırma:** Notebook'u sırayla çalıştırın. Kod çalışınca sırayla veri setini indirecek, FAISS indeksini oluşturacak ve Gradio arayüzünü başlatacak.
+3.  **Ortam Ayarı:** Gemini API Key, Kaggle Username ve Kaggle Key'i ortam değişkeni olarak veya Colab Secrets aracı ile ayarlayın
+4.  **GPU Ayarı:** Colab'de **Runtime $\to$ Change runtime type** menüsünden **T4 GPU**'yu seçin (Embedding aşamasının hızlı olması ve daha nokta atışı verilere ulaşması açısından kritiktir.)).
+5.  **Çalıştırma:** Notebook 6 hğcreden oluşur, hücreleri sırayla çalıştırın. Kod çalışınca sırayla veri setini indirecek, FAISS indeksini oluşturacak ve Gradio arayüzünü başlatacak.
 
 ## 5. Web Arayüzü & Product Kılavuzu
 
-[cite_start]Arayüz, Gradio'nun `ChatInterface` yapısıyla sunulmuştur[cite: 25].
+Arayüz, Gradio'nun `ChatInterface` yapısıyla oluşturulmuştur.
 
-* **Çalışma Akışı:** Arayüze girildiğinde, sistem kurulmuş RAG zincirini kullanarak analiz ve faktik sorulara yanıt verir. En iyi sonuçlar için sorularınızı İngilizce sormanız tavsiye edilir.
+* **Çalışma Akışı:** Arayüze girildiğinde, sistem kurulmuş RAG zincirini kullanarak kullancıı tarafından üretilen konu ile alakalı sorulara yanıt verir. En iyi sonuçlar için sorularınızı İngilizce sormanız tavsiye edilir çünkü kullanılan veri İngilizce kaynaklardan derlenmiştir.
 * **Test Etme:** Projenin yeteneklerini doğrulamak için **analitik ve tematik sorgular** kullanın (Örn: "Analyze the role of promises and oaths...").
 
 ### Web Linkiniz 
