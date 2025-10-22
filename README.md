@@ -67,11 +67,24 @@ Yapılan 10 soruluk test serisi, sistemin iki kritik yeteneğini kanıtlamışt�
 
 1.  **Gereksinimler:** `requirements.txt` dosyasını kullanarak gerekli tüm kütüphaneleri kurun:
     ```bash
-    pip install -r requirements.txt 
+    pip install -r requirements.txt
     ```
-3.  **Ortam Ayarı:** Gemini API Key, Kaggle Username ve Kaggle Key'i ortam değişkeni olarak veya Colab Secrets aracı ile ayarlayın
-4.  **GPU Ayarı:** Kodu .ali;tirmadan , önce Colab'de **Runtime $\to$ Change runtime type** menüsünden **T4 GPU**'yu seçin (Embedding aşamasının hızlı olması ve daha nokta atışı verilere ulaşması açısından kritiktir.)
-5.  **Çalıştırma:** Notebook 6 hğcreden oluşur, hücreleri sırayla çalıştırın. Kod çalışınca sırayla veri setini indirecek, FAISS indeksini oluşturacak ve Gradio arayüzünü başlatacak.
+2. Sanal Ortam (Virtual Environment) Kurulumu
+
+Projenin bağımsızlığını ve tekrar üretilebilirliğini sağlamak için sanal ortam oluşturulmalıdır:
+
+a.  **Sanal Ortam Oluşturma:**
+    ```bash
+    python3 -m venv venv_rag
+    ```
+b.  **Sanal Ortamı Etkinleştirme:**
+    * **Linux/macOS:** `source venv_rag/bin/activate`
+    * **Windows:** `.\venv_rag\Scripts\activate`
+
+3.  **Python Ortamı:** Sisteminizde Python 3.8 veya üzeri kurulu olmalıdır.
+4.  **Donanım Optimizasyonu:** Embedding sürecinin hız ve hassasiyeti için Colab'de **T4 GPU** çalışma zamanı tipi seçilmelidir.
+5.  **Güvenlik ve Tekrar Üretilebilirlik:** Projenin hassas API anahtarlarını (Gemini API Key, Kaggle kimlik bilgileri) yönetmek için, kod, anahtarları otomatik olarak sistemin **ortam değişkenlerinden** (`os.environ`) çekmek üzere tasarlanmıştır. Bu anahtarların Colab Secrets'a veya yerel bir `.env` dosyasına (bknz. madde2) tanımlanması gerekmektedir.
+6.  **Çalıştırma:** Notebook 6 hğcreden oluşur, hücreleri sırayla çalıştırın. Kod çalışınca sırayla veri setini indirecek, FAISS indeksini oluşturacak ve Gradio arayüzünü başlatacak.
 
 ## 5. Web Arayüzü & Product Kılavuzu
 
@@ -83,4 +96,8 @@ Arayüz, Gradio'nun `ChatInterface` yapısıyla oluşturulmuştur.
 ### Gradio Arayüzü İçin App'in Web Linki
 
 (https://1d91b6ad6838d17fa1.gradio.live/)
+
+Kısa Çalışma Örneği Videosu:
+Kısaca chatbotu'un kullanımı ve nasıl çalıştığını gösteren videoya aşağıdaki drive linkinden ulaşabilrisiniz:
+https://drive.google.com/file/d/18dEkg9gvqPu80yhe3xCXtua-VTH2eZAS/view?usp=sharing 
 
