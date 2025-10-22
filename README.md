@@ -18,10 +18,10 @@ Bu RAG zinciri, Retrieval ve Generation aşamalarında aşağıdaki teknolojiler
 
 | Bileşen | Teknoloji | Amaç |
 | :--- | :--- | :--- |
-| **Büyük Dil Modeli (LLM)** | [cite_start]Gemini 2.0 Flash [cite: 42] | Yüksek kaliteli, hızlı yanıt üretimi (Generation). |
-| **Embedding Modeli** | [cite_start]Hugging Face `all-mpnet-base-v2` [cite: 43] | Metinleri vektörlere dönüştürerek anlamsal arama yapılmasını sağlar. |
-| **Vektör Veritabanı** | [cite_start]FAISS [cite: 43] | Vektörler üzerinde hızlı ve verimli arama (Retrieval). |
-| **RAG Çatısı** | [cite_start]LangChain [cite: 44] | Tüm pipeline bileşenlerini entegre eder ve yönetir. |
+| **Büyük Dil Modeli (LLM)** | Gemini 2.0 Flash  | Yüksek kaliteli, hızlı yanıt üretimi (Generation). |
+| **Embedding Modeli** | Hugging Face `all-mpnet-base-v2` | Metinleri vektörlere dönüştürerek anlamsal arama yapılmasını sağlar. |
+| **Vektör Veritabanı** | FAISS | Vektörler üzerinde hızlı ve verimli arama (Retrieval). |
+| **RAG Çatısı** | LangChain | Tüm pipeline bileşenlerini entegre eder ve yönetir. |
 | **Arayüz** | Gradio | Kullanıcı etkileşimi için Python temelli web arayüzü. |
 
 ### Elde Edilen Sonuçlar Özeti
@@ -45,11 +45,10 @@ Yapılan testler sonucunda:
 
 Arayüz, Gradio'nun `ChatInterface` yapısıyla oluşturulmuştur.
 
-* **Çalışma Akışı:** Arayüze girildiğinde, sistem kurulmuş RAG zincirini kullanarak kullancıı tarafından üretilen konu ile alakalı sorulara yanıt verir. En iyi sonuçlar için sorularınızı İngilizce sormanız tavsiye edilir çünkü kullanılan veri İngilizce kaynaklardan derlenmiştir.
+* **Çalışma Akışı:** Arayüze girildiğinde, sistem kurulmuş RAG zincirini kullanarak kullanıcı tarafından üretilen konu ile alakalı sorulara yanıt verir. En iyi sonuçlar için sorularınızı İngilizce sormanız tavsiye edilir çünkü kullanılan veri İngilizce kaynaklardan derlenmiştir.
 * **Test Etme:** Projenin yeteneklerini doğrulamak için **analitik ve tematik sorgular** kullanın (Örn: "Analyze the role of promises and oaths...").
 
-### Web Linkiniz 
+### Gradio Arayüzü İçin App'in Web Linki
 
-**Önemli:** Projenizin URL'si mutlaka burada paylaşılmalıdır.
+(https://1d91b6ad6838d17fa1.gradio.live/)
 
-> **[LÜTFEN GRADIO İLE OLUŞAN CANLI LİNKİNİZİ BURAYA YAPIŞTIRIN]**
