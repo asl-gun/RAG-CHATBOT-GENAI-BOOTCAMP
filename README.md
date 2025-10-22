@@ -2,7 +2,7 @@
 
 # Akbank GenAI Bootcamp Projesi: RAG Tabanlı Akademik Masal Asistanı
 
-## [cite_start]1. Projenin Amacı [cite: 9]
+## 1. Projenin Amacı
 
 Bu proje, RAG (Retrieval Augmented Generation) mimarisini kullanarak geniş bir masal koleksiyonu üzerinde analitik ve faktik sorgulama yapabilen, akademik odaklı bir chatbot geliştirmeyi amaçlamaktadır. Sistem, LLM'in (Gemini 2.0 Flash) kendi genel bilgisini kullanmasını engelleyerek, yanıtların **kesinlikle yüklenen masal metinlerine** dayanmasını sağlamaktadır.
 
